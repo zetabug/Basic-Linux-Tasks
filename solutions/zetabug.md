@@ -18,27 +18,25 @@ $ ln -s ~/Music ~/Audio
 ```
 #### Task 2
  ```
- # Created users rob and bob
+ # Created users rob,bob and max
  $ sudo useradd -m bob -p bob
  $ sudo useradd -m rob -p rob
+ $ sudo useradd -m max -p max
  
- # Created group sysadmin
+ # Created group sysadmin and manager
  $ sudo groupadd sysyadmin
+ $ sudo groupadd manager
  
- # Added rob and bob to group sysadmin
+ # Added rob,bob and max to group sysadmin
  $ sudo usermod -a -G sysadmin bob
  $ sudo usermod -a -G sysadmin rob
+ $ sudo usermod -a -G sysadmin max
 
-# Created group manager
-$ sudo groupadd manager
+ # Added rob and bob to group manager
+ $ sudo usermod -a -G manager rob
+ $ sudo usermod -a -G manager bob
 
-# Added rob and bob to group manager
-$ sudo usermod -a -G manager rob
-$ sudo usermod -a -G manager bob
 
-# Created user max
-$ sudo useradd -m max -p max
 
-# Added max to group sysadmin
-$ sudo usermod -a -G sysadmin max
+ 
 
